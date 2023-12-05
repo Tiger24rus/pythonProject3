@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Record {{ record.id }}</title>
+</head>
+<body>
+    <h1>Edit Record {{ record.id }}</h1>
+    <form action="/edit/{{ record.id }}" method="post">
+        <label for="string_field">String Field:</label>
+        <input type="text" id="string_field" name="string_field" value="{{ record.string_field }}" required><br>
+        <label for="number_field">Number Field:</label>
+        <input type="number" id="number_field" name="number_field" value="{{ record.number_field }}" required><br>
+        <label for="date_field">Date Field:</label>
+        <input type="date" id="date_field" name="date_field" value="{{ record.date_field }}" required><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+</html>
